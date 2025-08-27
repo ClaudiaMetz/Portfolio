@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Claudia Metz | Full-Stack & Web3 Dev</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Claudia Metz</h1>
+      <p>Full-Stack Dev | Blockchain | AI Systems | Lean Thinking</p>
+      <div id="botones-utilidad">
+        <button id="themeToggle">🌗 Cambiar tema</button>
+        <button
+          id="Translate"
+          onclick="window.location.href='https://translate.google.com/translate?hl=&sl=auto&tl=en&u=' + window.location.href"
+        >
+          🌐 Traducir página
+        </button>
+      </div>
+      <script>
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+          document.documentElement.setAttribute(
+            "data-theme",
+            document.documentElement.getAttribute("data-theme") === "dark"
+              ? "light"
+              : "dark"
+          );
+        });
+      </script>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>
+        Desarrolladora especializada en arquitectura modular, e-commerce
+        dinámico y smart contracts. Me apasiona construir sistemas que integren
+        IA práctica y lógica backend con interfaces intuitivas. Aplico Lean
+        Thinking para optimizar procesos y diseño soluciones escalables que
+        conectan tecnología con propósito. Siempre estoy explorando nuevas
+        formas de aprender, crear y mejorar.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Proyectos destacados</h2>
+      <div class="card-container">
+        <!-- SimpleDEX -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>🧪 SimpleDEX</h3>
+              <p>
+                DEX funcional con lógica de liquidez y swap de tokens basada en
+                contratos inteligentes.
+              </p>
+              <p>
+                Implementa el estándar ERC-20 para gestión de tokens fungibles.
+              </p>
+              <p>
+                El contrato está verificado en Sepolia y diseñado con
+                arquitectura modular para facilitar la escalabilidad y
+                auditoría.
+              </p>
+              <p>
+                Visualización desarrollada en React para interacción directa con
+                el contrato.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h3>🧪 Swap Detallado</h3>
+              <p>
+                Calcula el ratio de intercambio con la fórmula
+                <em>x · y = k</em>.
+              </p>
+              <p>Valida saldo, aprueba tokens y ejecuta el swap en Sepolia.</p>
+              <p>
+                Arquitectura modular para facilitar auditoría y escalabilidad.
+              </p>
+              <p>
+                <a
+                  href="https://etherscan.io/address/0xf8929205FeA898c9d12b143233dF5fDB4fF10EBC"
+                  target="_blank"
+                  >🔍 Ver en Etherscan</a
+                ><br />
+                <a
+                  href="https://github.com/ClaudiaMetz/SimpleDEX-react"
+                  target="_blank"
+                  >📁 Repo en GitHub</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Winter Warm -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>☁️ Winter Warm</h3>
+              <p>
+                E-commerce inteligente con agente de IA que recomienda productos
+                según el clima.
+              </p>
+              <p>
+                Sistema de recomendación con lógica modular y API de
+                OpenWeatherMap.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h3>☁️ IA Recomienda</h3>
+              <p>
+                Consulta datos meteorológicos en tiempo real vía OpenWeatherMap.
+              </p>
+              <p>
+                Filtra productos según clima local y preferencias del usuario.
+              </p>
+              <p>
+                Diseño modular para escalar funcionalidades y mejorar
+                experiencia.
+              </p>
+              <p>
+                <a
+                  href="https://github.com/ClaudiaMetz/WinterWarm"
+                  target="_blank"
+                  >📁 Repo en GitHub</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Tech Stack</h2>
+      <div class="grid">
+        <div class="tech">
+          <img src="icons/html.svg" alt="HTML" />
+          <p>HTML</p>
+        </div>
+        <div class="tech">
+          <img src="icons/css.svg" alt="CSS" />
+          <p>CSS</p>
+        </div>
+        <!-- Repetir para JS, Spring Boot, etc. -->
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- Desarrolladora especializada enarquitectura modular, e-commerce dinámico y smart
+contracts. Me apasiona el aprendizaje estructurado, la IA práctica y aplicar
+Lean Thinking para optimizar flujos de trabajo.
+
+Plataforma DEX funcional con lógica de liquidez y swap de tokens basada en
+contratos inteligentes. Implementa estándares como ERC-20 para gestión de tokens
+fungibles, y explora integración con ERC-721 y ERC-1155 para funcionalidades
+NFT. El contrato está verificado en Sepolia y diseñado para ser modular,
+escalable y fácilmente auditable. -->

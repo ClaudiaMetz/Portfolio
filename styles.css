@@ -1,0 +1,267 @@
+/* Variables de color para ambos modos */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #1a1a1a;
+  --accent-color: #db0bea;
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+  --accent-color: #db0bea;
+  --header-bg: #1e1e1e;
+  --card-bg: #1e1e1e;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body y fuente general */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+}
+
+body > section,
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--header-bg);
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+/* Botón de tema */
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+#themeToggle:hover,
+#Translate:hover {
+  transform: scale(1.2);
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* Secciones */
+section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  max-width: 800px;
+}
+
+/* Proyectos */
+.project {
+  background-color: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project:hover {
+  background-color: #e9d8fd; /* Lila suave al hacer hover */
+}
+
+/* Enlaces */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+.tech img {
+  width: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+.tech img:hover {
+  transform: scale(1.1);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 320px;
+  height: 280px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  overflow-y: auto;
+  border-left: 4px solid var(--accent-color);
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.flip-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.flip-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.flip-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    height: auto;
+    min-height: 280px;
+  }
+}
+
+/* Contenedor de botones */
+#botones-utilidad {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+/* Estilo base para ambos botones */
+#botones-utilidad button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--boton-bg);
+  color: var(--boton-text);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover */
+#botones-utilidad button:hover {
+  background-color: var(--boton-hover);
+}
+
+/* Variables para modo claro */
+:root {
+  --boton-bg: #f0f0f0;
+  --boton-text: #333;
+  --boton-hover: #ddd;
+}
+
+/* Variables para modo oscuro */
+body.dark-mode {
+  --boton-bg: #333;
+  --boton-text: #f0f0f0;
+  --boton-hover: #444;
+}
